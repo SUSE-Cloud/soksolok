@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'database',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-database.git'
+
+cookbook 'mysql',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-mysql.git'
+
+cookbook 'postgresql',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-postgresql.git'
+
+cookbook 'openstack-common',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-openstack-common.git'
+
+cookbook 'chef-solo-search',
+  :git => 'git://github.com/edelight/chef-solo-search.git'
+
+cookbook 'keystone',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-keystone.git'
