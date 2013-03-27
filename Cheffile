@@ -20,3 +20,15 @@ cookbook 'chef-solo-search',
 
 cookbook 'keystone',
   :git => 'git://github.com/SUSE-Cloud/cookbook-keystone.git'
+
+cookbook 'glance',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-glance.git'
+
+cookbook 'nova',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-nova.git'
+
+cookbook 'apache2',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
+
+cookbook 'horizon',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-horizon.git'

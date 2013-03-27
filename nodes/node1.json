@@ -1,10 +1,36 @@
 {"run_list": [
     "recipe[chef-solo-search]",
+
     "recipe[postgresql::server]",
     "recipe[postgresql::client]",
+
     "recipe[openstack-common]",
+
     "recipe[keystone::db]",
-    "recipe[keystone::server]"],
+    "recipe[keystone::server]",
+
+    "role[keystone]",
+    "role[rabbitmq-server]",
+
+    "recipe[nova::nova-common]",
+    "recipe[nova::api-metadata]",
+    "recipe[nova::db]",
+    "recipe[nova::nova-setup]",
+    "recipe[nova::compute]",
+    "recipe[nova::api-os-compute]",
+    "recipe[nova::conductor]",
+    "recipe[nova::scheduler]",
+    "recipe[nova::vncproxy]",
+    "recipe[nova::ceilometer-db]",
+    "recipe[nova::vncproxy]",
+
+    "recipe[glance::db]",
+    "recipe[glance::api]",
+    "recipe[glance::registry]",
+
+    "recipe[horizon::db]",
+    "recipe[horizon::server]"
+ ],
  "postgresql": {
      "password": {"postgres": "secret"},
      "version": "9.2"
@@ -12,16 +38,35 @@
  "openstack": {
      "zypp": {"release": "openSUSE_12.3"},
      "release": "master",
-     "developer_mode": "true",
+     "developer_mode": true,
      "db": {
          "identity": {
+             "db_type": "postgresql",
+             "port": "5432"
+          },
+         "compute": {
+             "db_type": "postgresql",
+             "port": "5432"
+          },
+         "image": {
+             "db_type": "postgresql",
+             "port": "5432"
+          },
+         "dashboard": {
              "db_type": "postgresql",
              "port": "5432"
           }
      },
      "endpoints": {
          "identity-api": {"scheme": "http"},
-         "identity-admin": {"scheme": "http"}
+         "identity-admin": {"scheme": "http"},
+         "compute-api": {"scheme": "http"},
+         "image-api": {"scheme": "http"},
+         "image-registry": {"scheme": "http"}
      }
+ },
+ "horizon": {
+     "use_ssl": false,
+     "session_backend": "sql"
  }
 }
