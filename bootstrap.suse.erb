@@ -1,0 +1,67 @@
+#!/bin/bash
+set -e
+
+reponame() {
+    release=$(cat /etc/SuSE-release)
+    case "$release" in
+        *openSUSE?11.4*)
+            echo openSUSE_11.4 ;;
+        *openSUSE?12.1*)
+            echo openSUSE_12.1 ;;
+        *openSUSE?12.2*)
+            echo openSUSE_12.2 ;;
+        *"SUSE Linux Enterprise Server"*"VERSION = 11"*"PATCHLEVEL = 1"*)
+            echo SLE_11_SP1 ;;
+        *"SUSE Linux Enterprise Server"*"VERSION = 11"*"PATCHLEVEL = 2"*)
+            echo SLE_11_SP2 ;;
+    esac
+}
+
+# $1 32 bit id
+addrepokey() {
+    rpm -qa gpg-pubkey | grep -i $1 && return
+    gpg --keyserver pgp.mit.edu --recv-keys $1
+    KEYFILE=`mktemp gpg-key-$1-XXXXXX`
+    gpg --armor --export $1 > $KEYFILE
+    rpm --import $KEYFILE
+    rm $KEYFILE
+}
+
+addrepo() {
+    REPO=$1
+    REPOPATH=${REPO//:/:/}  # turn a:b:c into a:/b:/c
+    REPOURL=http://download.opensuse.org/repositories/${REPOPATH}/$(reponame)
+    REPOKEY=$2
+
+    zypper repos --export - | grep --fixed-strings $REPOURL && return
+    addrepokey $REPOKEY
+    zypper addrepo $REPOURL ${REPO}
+    zypper refresh ${REPO}
+}
+
+# $1 obs:repo:name
+addobsvendor() {
+    VENDORBASE=${1%%:*}
+    VENDORID=obs://build.opensuse.org/$VENDORBASE
+    VDIR=/etc/zypp/vendors.d
+    mkdir -p $VDIR
+    test -f $VDIR/$VENDORBASE && return
+    cat <<EOF > $VDIR/$VENDORBASE
+[main]
+vendors = SUSE,$VENDORID
+EOF
+}
+
+install() {
+    zypper --non-interactive install rubygem-chef
+}
+
+rpm -q rubygem-chef && exit
+
+install && exit
+
+addrepo systemsmanagement:chef:10 A0E46E11
+install && exit
+
+addobsvendor systemsmanagement:chef:10
+install
