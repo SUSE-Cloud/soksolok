@@ -29,6 +29,9 @@
     "recipe[glance::api]",
     "recipe[glance::registry]",
 
+    "recipe[memcached]",
+    "recipe[memcached::python]",
+    
     "recipe[horizon::db]",
     "recipe[horizon::server]"
  ],
@@ -68,6 +71,5 @@
  },
  "horizon": {
      "use_ssl": false,
-     "session_backend": "sql"
  }
 }
