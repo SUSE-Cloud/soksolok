@@ -35,3 +35,6 @@ cookbook 'apache2',
 
 cookbook 'horizon',
   :git => 'git://github.com/SUSE-Cloud/cookbook-horizon.git'
+
+cookbook 'memcached',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-memcached.git'
