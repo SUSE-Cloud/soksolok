@@ -59,7 +59,11 @@
          "dashboard": {
              "db_type": "postgresql",
              "port": "5432"
-          }
+          },
+         "metering": {
+             "db_type": "postgresql",
+             "port": "5432"
+         }
      },
      "endpoints": {
          "identity-api": {"scheme": "http"},
