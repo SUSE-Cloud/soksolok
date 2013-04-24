@@ -41,7 +41,7 @@
  },
  "openstack": {
      "zypp": {"release": "openSUSE_12.3"},
-     "release": "master",
+     "release": "grizzly",
      "developer_mode": true,
      "db": {
          "identity": {
