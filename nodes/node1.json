@@ -74,6 +74,6 @@
      }
  },
  "horizon": {
-     "use_ssl": false,
+     "use_ssl": false
  }
 }
