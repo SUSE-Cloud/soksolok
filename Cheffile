@@ -19,7 +19,7 @@ cookbook 'chef-solo-search',
   :git => 'git://github.com/edelight/chef-solo-search.git'
 
 cookbook 'rabbitmq-server',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-rabbitmq.git'
+  :git => 'git://github.com/att-cloud/cookbook-rabbitmq.git'
 
 cookbook 'keystone',
   :git => 'git://github.com/SUSE-Cloud/cookbook-keystone.git'
