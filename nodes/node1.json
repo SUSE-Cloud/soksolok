@@ -70,7 +70,8 @@
          "identity-admin": {"scheme": "http"},
          "compute-api": {"scheme": "http"},
          "image-api": {"scheme": "http"},
-         "image-registry": {"scheme": "http"}
+         "image-registry": {"scheme": "http"},
+         "metering-api": {"scheme": "http"}
      }
  },
  "nova": {
