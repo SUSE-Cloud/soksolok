@@ -73,6 +73,9 @@
          "image-registry": {"scheme": "http"}
      }
  },
+ "nova": {
+     "ceilometer": {"reverse-proxy": false}
+ },
  "horizon": {
      "use_ssl": false
  }
