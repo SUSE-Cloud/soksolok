@@ -23,7 +23,6 @@
     "recipe[nova::scheduler]",
     "recipe[nova::vncproxy]",
     "recipe[nova::ceilometer-db]",
-    "recipe[nova::vncproxy]",
 
     "recipe[glance::db]",
     "recipe[glance::api]",
