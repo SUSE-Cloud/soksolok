@@ -65,6 +65,7 @@
              "port": "5432"
          }
      },
+     "memcache_servers": ["127.0.0.1:11211"],
      "endpoints": {
          "identity-api": {"scheme": "http"},
          "identity-admin": {"scheme": "http"},
