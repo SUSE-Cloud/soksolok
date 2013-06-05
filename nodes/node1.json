@@ -6,33 +6,34 @@
 
     "recipe[openstack-common]",
 
-    "recipe[keystone::db]",
-    "recipe[keystone::server]",
+    "recipe[openstack-identity::db]",
+    "recipe[openstack-identity::server]",
 
-    "role[keystone]",
+    "recipe[openstack-image::db]",
+    "recipe[openstack-image::identity_registration]",
+    "recipe[openstack-image::api]",
+    "recipe[openstack-image::registry]",
+
+    "role[os-identity]",
     "role[rabbitmq-server]",
     "recipe[rabbitmq-devwrap]",
 
-    "recipe[nova::nova-common]",
-    "recipe[nova::api-metadata]",
-    "recipe[nova::db]",
-    "recipe[nova::nova-setup]",
-    "recipe[nova::compute]",
-    "recipe[nova::api-os-compute]",
-    "recipe[nova::conductor]",
-    "recipe[nova::scheduler]",
-    "recipe[nova::vncproxy]",
-    "recipe[nova::ceilometer-db]",
-
-    "recipe[glance::db]",
-    "recipe[glance::api]",
-    "recipe[glance::registry]",
-
     "recipe[memcached]",
     "recipe[memcached::python]",
-    
-    "recipe[horizon::db]",
-    "recipe[horizon::server]"
+
+    "recipe[openstack-compute::nova-common]",
+    "recipe[openstack-compute::identity_registration]",
+    "recipe[openstack-compute::api-metadata]",
+    "recipe[openstack-compute::db]",
+    "recipe[openstack-compute::nova-setup]",
+    "recipe[openstack-compute::compute]",
+    "recipe[openstack-compute::api-os-compute]",
+    "recipe[openstack-compute::conductor]",
+    "recipe[openstack-compute::scheduler]",
+    "recipe[openstack-compute::vncproxy]",
+
+    "recipe[openstack-dashboard::db]",
+    "recipe[openstack-dashboard::server]"
  ],
  "postgresql": {
      "password": {"postgres": "secret"},
@@ -71,12 +72,13 @@
          "image-api": {"scheme": "http"},
          "image-registry": {"scheme": "http"},
          "metering-api": {"scheme": "http"}
+     },
+     "dashboard": {
+         "use_ssl": false,
+         "debug": true
      }
  },
  "nova": {
      "ceilometer": {"reverse-proxy": false}
- },
- "horizon": {
-     "use_ssl": false
  }
 }

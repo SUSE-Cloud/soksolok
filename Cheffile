@@ -13,7 +13,7 @@ cookbook 'postgresql',
   :git => 'git://github.com/SUSE-Cloud/cookbook-postgresql.git'
 
 cookbook 'openstack-common',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-openstack-common.git'
+  :git => 'git://github.com/stackforge/cookbook-openstack-common.git'
 
 cookbook 'chef-solo-search',
   :git => 'git://github.com/edelight/chef-solo-search.git'
@@ -21,20 +21,20 @@ cookbook 'chef-solo-search',
 cookbook 'rabbitmq-server',
   :git => 'git://github.com/att-cloud/cookbook-rabbitmq.git'
 
-cookbook 'keystone',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-keystone.git'
+cookbook 'openstack-identity',
+  :git => 'git://github.com/stackforge/cookbook-openstack-identity.git'
 
-cookbook 'glance',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-glance.git'
+cookbook 'openstack-image',
+  :git => 'git://github.com/stackforge/cookbook-openstack-image.git'
 
-cookbook 'nova',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-nova.git'
+cookbook 'openstack-compute',
+  :git => 'git://github.com/stackforge/cookbook-openstack-compute.git'
 
 cookbook 'apache2',
   :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
 
-cookbook 'horizon',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-horizon.git'
+cookbook 'openstack-dashboard',
+  :git => 'git://github.com/stackforge/cookbook-openstack-dashboard.git'
 
 cookbook 'memcached',
   :git => 'git://github.com/SUSE-Cloud/cookbook-memcached.git'
