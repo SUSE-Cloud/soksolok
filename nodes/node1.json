@@ -11,7 +11,7 @@
 
     "role[keystone]",
     "role[rabbitmq-server]",
-    "recipe[rabbitmq-server]",
+    "recipe[rabbitmq-devwrap]",
 
     "recipe[nova::nova-common]",
     "recipe[nova::api-metadata]",
