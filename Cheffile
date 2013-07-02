@@ -12,14 +12,20 @@ cookbook 'mysql',
 cookbook 'postgresql',
   :git => 'git://github.com/SUSE-Cloud/cookbook-postgresql.git'
 
-cookbook 'openstack-common',
-  :git => 'git://github.com/stackforge/cookbook-openstack-common.git'
-
 cookbook 'chef-solo-search',
   :git => 'git://github.com/edelight/chef-solo-search.git'
 
 cookbook 'rabbitmq-server',
   :git => 'git://github.com/att-cloud/cookbook-rabbitmq.git'
+
+cookbook 'apache2',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
+
+cookbook 'memcached',
+  :git => 'git://github.com/SUSE-Cloud/cookbook-memcached.git'
+
+cookbook 'openstack-common',
+  :git => 'git://github.com/stackforge/cookbook-openstack-common.git'
 
 cookbook 'openstack-identity',
   :git => 'git://github.com/stackforge/cookbook-openstack-identity.git'
@@ -30,11 +36,6 @@ cookbook 'openstack-image',
 cookbook 'openstack-compute',
   :git => 'git://github.com/stackforge/cookbook-openstack-compute.git'
 
-cookbook 'apache2',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
-
 cookbook 'openstack-dashboard',
   :git => 'git://github.com/stackforge/cookbook-openstack-dashboard.git'
 
-cookbook 'memcached',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-memcached.git'
