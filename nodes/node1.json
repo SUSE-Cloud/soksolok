@@ -84,8 +84,20 @@
          "metering-api": {"scheme": "http"},
          "network-api": {"scheme": "http"}
      },
+     "compute": {
+         "verbose": true,
+         "debug": true
+     },
+     "image": {
+         "verbose": true,
+         "debug": true
+     },
      "dashboard": {
          "use_ssl": false,
+         "debug": true
+     },
+     "quantum": {
+         "verbose": true,
          "debug": true
      }
  },
