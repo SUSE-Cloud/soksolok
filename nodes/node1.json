@@ -8,6 +8,7 @@
 
     "recipe[openstack-identity::db]",
     "recipe[openstack-identity::server]",
+    "recipe[openstack-identity::registration]",
 
     "recipe[openstack-image::db]",
     "recipe[openstack-image::identity_registration]",
