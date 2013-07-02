@@ -33,6 +33,10 @@
     "recipe[openstack-compute::scheduler]",
     "recipe[openstack-compute::vncproxy]",
 
+    "recipe[openstack-network::identity_registration]",
+    "recipe[openstack-network::db]",
+    "recipe[openstack-network::server]",
+    
     "recipe[openstack-dashboard::db]",
     "recipe[openstack-dashboard::server]"
  ],
@@ -64,6 +68,10 @@
          "metering": {
              "db_type": "postgresql",
              "port": "5432"
+         },
+         "network": {
+             "db_type": "postgresql",
+             "port": "5432"
          }
      },
      "memcache_servers": ["127.0.0.1:11211"],
@@ -73,7 +81,8 @@
          "compute-api": {"scheme": "http"},
          "image-api": {"scheme": "http"},
          "image-registry": {"scheme": "http"},
-         "metering-api": {"scheme": "http"}
+         "metering-api": {"scheme": "http"},
+         "network-api": {"scheme": "http"}
      },
      "dashboard": {
          "use_ssl": false,

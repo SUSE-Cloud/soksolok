@@ -39,3 +39,5 @@ cookbook 'openstack-compute',
 cookbook 'openstack-dashboard',
   :git => 'git://github.com/stackforge/cookbook-openstack-dashboard.git'
 
+cookbook 'openstack-network',
+  :git => 'git://github.com/stackforge/cookbook-openstack-network.git'
