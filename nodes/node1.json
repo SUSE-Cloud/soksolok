@@ -97,7 +97,7 @@
          "use_ssl": false,
          "debug": true
      },
-     "quantum": {
+     "network": {
          "verbose": true,
          "debug": true
      }
