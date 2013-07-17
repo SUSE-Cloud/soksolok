@@ -37,6 +37,8 @@ cookbook 'openstack-compute',
 
 cookbook 'openstack-dashboard',
   :git => 'git://github.com/stackforge/cookbook-openstack-dashboard.git'
+cookbook 'openstack-block-storage',
+  :git => 'git://github.com/stackforge/cookbook-openstack-block-storage.git'
 
 cookbook 'openstack-network',
   :git => 'git://github.com/stackforge/cookbook-openstack-network.git'
