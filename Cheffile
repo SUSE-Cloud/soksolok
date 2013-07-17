@@ -3,9 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'database',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-database.git'
-
 cookbook 'mysql',
   :git => 'git://github.com/SUSE-Cloud/cookbook-mysql.git'
 
