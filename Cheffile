@@ -24,6 +24,9 @@ cookbook 'apache2',
 cookbook 'memcached',
   :git => 'git://github.com/SUSE-Cloud/cookbook-memcached.git'
 
+cookbook 'openstack-ops-database',
+  :git => 'git://github.com/stackforge/cookbook-openstack-ops-database.git'
+
 cookbook 'openstack-common',
   :git => 'git://github.com/stackforge/cookbook-openstack-common.git'
 

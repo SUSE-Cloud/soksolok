@@ -6,11 +6,11 @@
 
     "recipe[openstack-common]",
 
-    "recipe[openstack-identity::db]",
+    "recipe[openstack-ops-database::openstack-db]",
+
     "recipe[openstack-identity::server]",
     "recipe[openstack-identity::registration]",
 
-    "recipe[openstack-image::db]",
     "recipe[openstack-image::identity_registration]",
     "recipe[openstack-image::api]",
     "recipe[openstack-image::registry]",
@@ -26,7 +26,6 @@
 
     "recipe[openstack-compute::identity_registration]",
     "recipe[openstack-compute::api-metadata]",
-    "recipe[openstack-compute::db]",
     "recipe[openstack-compute::nova-setup]",
     "recipe[openstack-compute::conductor]",
     "recipe[openstack-compute::compute]",
@@ -35,10 +34,8 @@
     "recipe[openstack-compute::vncproxy]",
 
     "recipe[openstack-network::identity_registration]",
-    "recipe[openstack-network::db]",
     "recipe[openstack-network::server]",
     
-    "recipe[openstack-dashboard::db]",
     "recipe[openstack-dashboard::server]"
  ],
  "postgresql": {
