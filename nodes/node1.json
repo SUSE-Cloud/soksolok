@@ -6,6 +6,8 @@
 
     "recipe[openstack-common]",
 
+    "recipe[memcached]",
+
     "recipe[openstack-ops-database::openstack-db]",
 
     "recipe[openstack-identity::server]",
@@ -20,9 +22,6 @@
 
     "recipe[openstack-compute::nova-common]",
     "recipe[rabbitmq-devwrap]",
-
-    "recipe[memcached]",
-    "recipe[memcached::python]",
 
     "recipe[openstack-compute::identity_registration]",
     "recipe[openstack-compute::api-metadata]",
