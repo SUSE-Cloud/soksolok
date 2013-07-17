@@ -50,30 +50,8 @@
      "release": "grizzly",
      "developer_mode": true,
      "db": {
-         "identity": {
-             "db_type": "postgresql",
-             "port": "5432"
-          },
-         "compute": {
-             "db_type": "postgresql",
-             "port": "5432"
-          },
-         "image": {
-             "db_type": "postgresql",
-             "port": "5432"
-          },
-         "dashboard": {
-             "db_type": "postgresql",
-             "port": "5432"
-          },
-         "metering": {
-             "db_type": "postgresql",
-             "port": "5432"
-         },
-         "network": {
-             "db_type": "postgresql",
-             "port": "5432"
-         }
+         "service_type": "postgresql",
+         "port": "5432"
      },
      "memcache_servers": ["127.0.0.1:11211"],
      "endpoints": {
