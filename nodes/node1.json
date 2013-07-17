@@ -67,6 +67,10 @@
          "verbose": true,
          "debug": true
      },
+     "identity": {
+         "verbose": true,
+         "debug": true
+     },
      "image": {
          "verbose": true,
          "debug": true
