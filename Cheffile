@@ -6,6 +6,8 @@ site 'http://community.opscode.com/api/v1'
 cookbook 'mysql',
   :git => 'git://github.com/SUSE-Cloud/cookbook-mysql.git'
 
+cookbook 'memcached'
+
 cookbook 'postgresql',
   :git => 'git://github.com/SUSE-Cloud/cookbook-postgresql.git'
 
@@ -17,9 +19,6 @@ cookbook 'rabbitmq-server',
 
 cookbook 'apache2',
   :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
-
-cookbook 'memcached',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-memcached.git'
 
 cookbook 'openstack-ops-database',
   :git => 'git://github.com/stackforge/cookbook-openstack-ops-database.git'
