@@ -3,8 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-cookbook 'mysql',
-  :git => 'git://github.com/SUSE-Cloud/cookbook-mysql.git'
 
 cookbook 'memcached'
 
