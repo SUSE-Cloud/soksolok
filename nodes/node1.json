@@ -8,7 +8,11 @@
 
     "recipe[memcached]",
 
+    "role[os-ops-messaging]",
+    "role[os-identity]",
+
     "recipe[openstack-ops-database::openstack-db]",
+    "recipe[openstack-ops-messaging::server]",
 
     "recipe[openstack-identity::server]",
     "recipe[openstack-identity::registration]",
@@ -17,11 +21,11 @@
     "recipe[openstack-image::api]",
     "recipe[openstack-image::registry]",
 
-    "role[os-identity]",
-    "role[rabbitmq-server]",
+    "recipe[openstack-block-storage::identity_registration]",
+    "recipe[openstack-block-storage::api]",
+    "recipe[openstack-block-storage::scheduler]",
 
     "recipe[openstack-compute::nova-common]",
-    "recipe[rabbitmq-devwrap]",
 
     "recipe[openstack-compute::identity_registration]",
     "recipe[openstack-compute::api-metadata]",
