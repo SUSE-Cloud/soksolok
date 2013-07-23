@@ -61,6 +61,7 @@
          "image-api": {"scheme": "http"},
          "image-registry": {"scheme": "http"},
          "metering-api": {"scheme": "http"},
+         "volume-api": {"scheme": "http"},
          "network-api": {"scheme": "http"}
      },
      "compute": {
