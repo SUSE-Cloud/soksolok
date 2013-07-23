@@ -24,6 +24,7 @@
     "recipe[openstack-block-storage::identity_registration]",
     "recipe[openstack-block-storage::api]",
     "recipe[openstack-block-storage::scheduler]",
+    "recipe[openstack-block-storage::volume]",
 
     "recipe[openstack-compute::nova-common]",
 
