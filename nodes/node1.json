@@ -80,6 +80,10 @@
          "use_ssl": false,
          "debug": true
      },
+     "block-storage": {
+         "verbose": true,
+         "debug": true
+     },
      "network": {
          "verbose": true,
          "debug": true
