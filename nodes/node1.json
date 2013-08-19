@@ -38,6 +38,8 @@
     "recipe[openstack-compute::scheduler]",
     "recipe[openstack-compute::vncproxy]",
 
+    "recipe[openstack-compute::network]",
+
     "recipe[openstack-network::identity_registration]",
     "recipe[openstack-network::server]",
     
@@ -67,6 +69,7 @@
          "network-api": {"scheme": "http"}
      },
      "compute": {
+         "network": {"service_type": "quantum"},
          "verbose": true,
          "debug": true
      },
