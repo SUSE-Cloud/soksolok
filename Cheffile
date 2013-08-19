@@ -12,8 +12,8 @@ cookbook 'postgresql',
 cookbook 'chef-solo-search',
   :git => 'git://github.com/edelight/chef-solo-search.git'
 
-cookbook 'rabbitmq-server',
-  :git => 'git://github.com/att-cloud/cookbook-rabbitmq.git'
+cookbook 'rabbitmq',
+  :git => 'git://github.com/opscode-cookbooks/rabbitmq.git'
 
 cookbook 'apache2',
   :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
