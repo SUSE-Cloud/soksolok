@@ -40,3 +40,5 @@ cookbook 'openstack-block-storage',
 
 cookbook 'openstack-network',
   :git => 'git://github.com/stackforge/cookbook-openstack-network.git'
+cookbook 'openstack-metering',
+  :git => 'git://github.com/stackforge/cookbook-openstack-metering.git'
