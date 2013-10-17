@@ -50,7 +50,7 @@
      "version": "9.2"
  },
  "openstack": {
-     "zypp": {"release": "SLE_11_SP2"},
+     "zypp": {"release": "openSUSE_12.3"},
      "release": "grizzly",
      "developer_mode": true,
      "db": {
