@@ -5,15 +5,13 @@ site 'http://community.opscode.com/api/v1'
 
 
 cookbook 'memcached'
+cookbook 'rabbitmq'
 
 cookbook 'postgresql',
   :git => 'git://github.com/SUSE-Cloud/cookbook-postgresql.git'
 
 cookbook 'chef-solo-search',
   :git => 'git://github.com/edelight/chef-solo-search.git'
-
-cookbook 'rabbitmq',
-  :git => 'git://github.com/opscode-cookbooks/rabbitmq.git'
 
 cookbook 'apache2',
   :git => 'git://github.com/SUSE-Cloud/cookbook-apache2.git'
